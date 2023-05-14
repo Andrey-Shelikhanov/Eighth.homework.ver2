@@ -184,5 +184,14 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    public void setCurrentStationValidValueSetStationInDifferentConstructor() {
+        Radio radio = new Radio(40);
+        radio.setCurrentStation(39);
+        int expected = 39;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+
+    }
 
 }
